@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function TodoInput() {
+  const [inputText, setInputText] = useState('') 
+
+  
   return (
     <div>
         <input 
