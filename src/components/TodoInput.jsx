@@ -19,9 +19,6 @@ function TodoInput(pros) {
         }}
         className='bg-purple-600 text-white p-2 rounded-lg font-bold'
         >Add</button>
-        <div className='text-white'>
-          {inputText}
-        </div>
     </div>
   )
 }
