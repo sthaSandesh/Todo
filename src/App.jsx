@@ -26,7 +26,7 @@ function App() {
             <TodoList key={index} task={task} />
           )
         })}
-    </h1>
+      </h1>
     </div>
   )
 }
