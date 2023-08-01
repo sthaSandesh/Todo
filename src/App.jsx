@@ -15,7 +15,7 @@ function App() {
     <div >
       <TodoInput addTask={addTask} />
 
-      <h1>
+      <h1 className='font-bold text-5xl text-purple-700 py-4'>
         Todo
         <hr />
         {List.map((task, index) => {
