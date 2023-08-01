@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TodoInput(pros) {
+function TodoInput(props) {
   const [inputText, setInputText] = useState('')
 
 
@@ -9,13 +9,14 @@ function TodoInput(pros) {
       <input
         type="text"
         placeholder='Enter Your Task Here'
+        value={inputText}
         className='rounded-lg border-2 border-purple-600 p-2 m-2 w-80 text-purple-600 font-bold'
-        onChange={(e) => setInputText(e.target.value)}
+        onChange={(e) => {setInputText(e.target.value)}}
       />
       <button
         onClick={() => {
-          pros.addTask(inputText)
-          setInputText('')
+          props.addTask(inputText)
+          setInputText("")
         }}
         className='bg-purple-600 text-white p-2 rounded-lg font-bold'
       >Add</button>
