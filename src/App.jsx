@@ -4,18 +4,27 @@ import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
 
 function App() {
-  const [List , setList] = useState([])
+  const [List, setList] = useState([])
 
 
-   let addTask = (inputText) => {
-      setList([...List, inputText]) 
-   }
+  let addTask = (inputText) => {
+    setList([...List, inputText])
+  }
 
   return (
-   <div >
-    <TodoInput addTask={addTask}/> 
-    <TodoList /> 
-   </div>
+    <div >
+      <TodoInput addTask={addTask} />
+
+      <h1>
+        Todo
+        <hr />
+        {List.map((task, index) => {
+          return (
+            <TodoList key={index} task={task} />
+          )
+        })}
+    </h1>
+    </div>
   )
 }
 
