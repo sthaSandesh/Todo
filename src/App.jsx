@@ -21,11 +21,13 @@ function App() {
       <h1 className='font-bold text-2xl text-white py-4 mx-8'>
         Your Tasks
         <hr />
+        <ol>
         {List.map((task, index) => {
           return (
             <TodoList key={index} task={task} />
           )
         })}
+        </ol>
       </h1>
     </div>
   )
